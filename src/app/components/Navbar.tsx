@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Navbar() {
   const listMenu = [
-    { name: "Sekolah", href: "/sekolah" },
-    { name: "UMKM", href: "/umkm" },
-    { name: "Wisata", href: "/wisata" },
-    { name: "Home Industry", href: "/home-industry" },
+    { name: 'Sekolah', href: '#sekolah' },
+    { name: 'UMKM', href: '#umkm' },
+    { name: 'Wisata', href: '#wisata' },
+    { name: 'Home Industry', href: '#home-industry' },
   ];
 
   return (
     <nav className="w-full h-fit py-3 flex justify-between fixed top-0 bg-white z-50 shadow-sm">
       <div className="w-full flex justify-between container mx-auto">
-        <Link href={"/"} className="flex gap-5 items-center cursor-pointer">
+        <Link href={'/'} className="flex gap-5 items-center cursor-pointer">
           <Image
-            src={"/logo-garut.svg"}
+            src={'/logo-garut.svg'}
             alt="logo"
             width={1000}
             height={1000}
