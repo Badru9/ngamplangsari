@@ -8,7 +8,7 @@ export default function Navbar() {
     { name: 'Sekolah', href: '#sekolah' },
     { name: 'UMKM', href: '#umkm' },
     { name: 'Wisata', href: '#wisata' },
-    { name: 'Home Industry', href: '#home-industry' },
+    // { name: 'Home Industry', href: '#home-industry' },
   ];
 
   return (

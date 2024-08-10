@@ -18,6 +18,9 @@ import {
   Kerajinan,
   KerupukKetumbar,
   Pempek,
+  Talangseng1,
+  Talangseng2,
+  Talangseng3,
 } from './images/image';
 import Link from 'next/link';
 import Card from './components/Card';
@@ -107,6 +110,17 @@ export default function Home() {
     },
   ];
 
+  const listWisata = [
+    {
+      id: 1,
+      name: 'Talangseng',
+      img: Talangseng3,
+      classname: 'w-1/4 px-5',
+      quality: 100,
+      imgClassName: 'h-full',
+    },
+  ];
+
   return (
     <main className="flex flex-col min-h-screen bg-primary text-black relative items-center">
       <Navbar />
@@ -118,7 +132,7 @@ export default function Home() {
           alt="background"
           width={1000}
           height={1000}
-          quality={100}
+          quality={50}
           className="w-full rounded-2xl"
         />
       </div>
@@ -155,7 +169,7 @@ export default function Home() {
             <Card
               id={index}
               key={index}
-              href={`/sekolah/${item.id}`}
+              // href={`/sekolah/${item.id}`}
               {...item}
             />
           ))}
@@ -165,29 +179,37 @@ export default function Home() {
         <h1 className="text-2xl font-semibold text-center">UMKM</h1>
         <div className="w-full grid grid-cols-3 gap-10" id="umkm">
           {listUMKM.map((item: any, index: number) => (
-            <Card id={index} key={index} href={`/umkm/${item.id}`} {...item} />
+            <Card
+              id={index}
+              key={index}
+              // href={`/umkm/${item.id}`}
+              {...item}
+            />
           ))}
         </div>
       </div>
       <div id="wisata" className="w-full container mx-auto my-20 space-y-5">
         <h1 className="text-2xl font-semibold text-center">Wisata</h1>
-        <p className="text-justify text-black/70 indent-2 leading-6">
+        {/* <p className="text-justify text-black/70 indent-2 leading-6">
           Wisata yang berada di Desa Ngamplangsari merupakan wisata yang jarang
           diketahui keberadaannya oleh banyak orang. Wisata tersebut adalah
           <b>Talangseng.</b>
-        </p>
+        </p> */}
+        <div
+          className="w-full flex items-center justify-center gap-10"
+          id="umkm"
+        >
+          {listWisata.map((item: any, index: number) => (
+            <Card
+              id={index}
+              key={index}
+              quality={item?.quality}
+              // href={`/wisata/${item.id}`}
+              {...item}
+            />
+          ))}
+        </div>
       </div>
-      <div
-        id="home-industry"
-        className="w-full container mx-auto my-20 space-y-5"
-      >
-        <h1 className="text-2xl font-semibold text-center">Home Industry</h1>
-        <p className="text-justify text-black/70 indent-2 leading-6">
-          Di Desa ini juga terdapat beberapa Home Industry seperti
-          <b> Pengrajin Kayu Jati Belanda, .</b>
-        </p>
-      </div>
-      <Image src={''} alt="bg-image" />
     </main>
   );
 }

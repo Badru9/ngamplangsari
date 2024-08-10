@@ -17,6 +17,9 @@ import Dodol from './umkm/dodol.jpg';
 import Kerajinan from './umkm/kerjainan.jpg';
 import KerupukKetumbar from './umkm/kerupuk-ketumbar.jpg';
 import Pempek from './umkm/pempek.jpg';
+import Talangseng1 from './wisata/sawah1.jpg';
+import Talangseng2 from './wisata/sawah2.jpg';
+import Talangseng3 from './wisata/sawah3.jpg';
 
 export {
   Almukhtaariyah,
@@ -33,4 +36,7 @@ export {
   Kerajinan,
   KerupukKetumbar,
   Pempek,
+  Talangseng1,
+  Talangseng2,
+  Talangseng3,
 };

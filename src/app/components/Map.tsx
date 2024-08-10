@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { MapPinArea } from "@phosphor-icons/react";
-import { useState } from "react";
+import Link from 'next/link';
+import { MapPinArea } from '@phosphor-icons/react';
+import { useState } from 'react';
 
 export default function Map() {
   const [show, setShow] = useState<boolean>(false);
@@ -24,7 +24,7 @@ export default function Map() {
         />
       </div>
       {!show && (
-        <p className="fixed bottom-11 border-black border right-[100px] whitespace-nowrap cursor-default bg-white px-4 py-2 rounded-2xl">
+        <p className="fixed bottom-11 border-black border right-[100px] whitespace-nowrap cursor-default bg-white px-4 py-2 rounded-2xl z-50">
           Lihat di Maps
         </p>
       )}
