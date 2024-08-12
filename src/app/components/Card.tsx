@@ -1,5 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { CldImage } from 'next-cloudinary';
+import { type CldImageProps } from 'next-cloudinary';
+
+const CardImage = (props: CldImageProps) => <CldImage {...props} />;
 
 interface CardProps {
   // href: string;
@@ -29,7 +33,7 @@ export default function Card({
       className={`w-full flex flex-col border border-black gap-5 items-center min-h-60 cursor-pointer font-semibold rounded-2xl px-10 py-5 group hover:border-none hover:shadow-md transition-all duration-200 ease-in-out ${classname}`}
       // onClick={onclick}
     >
-      <Image
+      <CardImage
         src={img}
         alt="background"
         width={1000}

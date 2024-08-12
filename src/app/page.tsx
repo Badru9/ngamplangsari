@@ -12,15 +12,12 @@ import {
   SMPAsySyuhada,
   SMKAsySyuhada,
   SDN1Ngamplangsari,
-  SDN2Ngamplangsari,
   MangOno,
   Dodol,
   Kerajinan,
   KerupukKetumbar,
   Pempek,
   Talangseng1,
-  Talangseng2,
-  Talangseng3,
 } from './images/image';
 import Link from 'next/link';
 import Card from './components/Card';
@@ -114,7 +111,7 @@ export default function Home() {
     {
       id: 1,
       name: 'Talangseng',
-      img: Talangseng3,
+      img: Talangseng1,
       classname: 'w-1/4 px-5',
       quality: 100,
       imgClassName: 'h-full',
@@ -169,7 +166,7 @@ export default function Home() {
             <Card
               id={index}
               key={index}
-              // href={`/sekolah/${item.id}`}
+              // img={`/sekolah/${item.id}`}
               {...item}
             />
           ))}
@@ -182,7 +179,7 @@ export default function Home() {
             <Card
               id={index}
               key={index}
-              // href={`/umkm/${item.id}`}
+              // img={`/umkm/${item.id}`}
               {...item}
             />
           ))}
@@ -204,7 +201,7 @@ export default function Home() {
               id={index}
               key={index}
               quality={item?.quality}
-              // href={`/wisata/${item.id}`}
+              // img={`/wisata/${item.id}`}
               {...item}
             />
           ))}
