@@ -19,7 +19,7 @@ import {
   Pempek,
   Talangseng1,
 } from './images/image';
-import Link from 'next/link';
+
 import Card from './components/Card';
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
       id: 1,
       name: 'Pondok Pesantren Darul Arqam Muhammadiyah Garut',
       img: DarulArqam,
-      classname: 'col-span-2 px-5',
+      classname: 'col-span-1 lg:col-span-2 px-5',
     },
     {
       id: 2,
@@ -40,7 +40,7 @@ export default function Home() {
       id: 3,
       name: 'PAUD KOBER - TK ASY-SYUHADA',
       img: AsySyuhada,
-      classname: 'col-span-3 px-5',
+      classname: 'col-span-1 lg:col-span-3 px-5',
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ export default function Home() {
       id: 7,
       name: 'SMK Plus ASY-SYUHADA',
       img: SMKAsySyuhada,
-      classname: 'col-span-2 px-5',
+      classname: 'col-span-1 lg:col-span-2 px-5',
     },
     {
       id: 8,
@@ -79,7 +79,7 @@ export default function Home() {
       id: 1,
       name: 'Mang Ono',
       img: MangOno,
-      classname: 'col-span-2 px-5',
+      classname: 'col-span-1 lg:col-span-2 px-5',
     },
     {
       id: 2,
@@ -97,13 +97,13 @@ export default function Home() {
       id: 4,
       name: 'Kerupuk Ketumbar',
       img: KerupukKetumbar,
-      classname: 'col-span-2 px-5',
+      classname: 'col-span-1 lg:col-span-2 px-5',
     },
     {
       id: 5,
       name: 'Pempek',
       img: Pempek,
-      classname: 'col-span-3 px-5',
+      classname: 'col-span-1 lg:col-span-3 px-5',
     },
   ];
 
@@ -119,10 +119,10 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col min-h-screen bg-primary text-black relative items-center">
+    <main className="flex flex-col min-h-screen bg-primary text-black relative items-center px-5 lg:px-0">
       <Navbar />
       <Map />
-      <div className="w-full container mx-auto relative my-24">
+      <div className="w-full container mx-auto relative mt-24 lg:mb-24 mb-10">
         <div className="w-full h-full rounded-2xl bg-black/30 absolute top-0 left-0 z-10"></div>
         <Image
           src={'/background-image.png'}
@@ -133,7 +133,7 @@ export default function Home() {
           className="w-full rounded-2xl"
         />
       </div>
-      <div className="w-full container mx-auto my-20 space-y-5">
+      <div className="w-full container mx-auto lg:my-20 space-y-5">
         <h1 className="text-2xl font-semibold text-center">
           Tentang Desa Ngamplangsari
         </h1>
@@ -161,7 +161,10 @@ export default function Home() {
       </div>
       <div id="sekolah" className="w-full container mx-auto my-20 space-y-5">
         <h1 className="text-2xl font-semibold text-center">Sekolah</h1>
-        <div className="w-full grid grid-cols-3 gap-10" id="sekolah">
+        <div
+          className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10"
+          id="sekolah"
+        >
           {listSchool.map((item: any, index: number) => (
             <Card
               id={index}
@@ -174,7 +177,10 @@ export default function Home() {
       </div>
       <div id="umkm" className="w-full container mx-auto my-20 space-y-5">
         <h1 className="text-2xl font-semibold text-center">UMKM</h1>
-        <div className="w-full grid grid-cols-3 gap-10" id="umkm">
+        <div
+          className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10"
+          id="umkm"
+        >
           {listUMKM.map((item: any, index: number) => (
             <Card
               id={index}
