@@ -77,19 +77,19 @@ export default function Home() {
   const listUMKM = [
     {
       id: 1,
-      name: 'Mang Ono',
+      name: 'Bakso Ciwang Mang Ono',
       img: MangOno,
       classname: 'col-span-1 lg:col-span-2 px-5',
     },
     {
       id: 2,
-      name: 'Dodol',
+      name: 'Dodol Bu Rita',
       img: Dodol,
       classname: '',
     },
     {
       id: 3,
-      name: 'Kerajinan Kayu Jati Belanda',
+      name: 'Kerajinan Kayu Jati Belanda Bapak Sopiyan',
       img: Kerajinan,
       classname: '',
     },

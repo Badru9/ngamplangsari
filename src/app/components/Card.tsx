@@ -30,7 +30,7 @@ export default function Card({
     <div
       // href={href}
       key={id}
-      className={`w-full flex flex-col border border-black gap-5 items-center min-h-60 cursor-pointer font-semibold rounded-2xl px-10 py-5 group hover:border-none hover:shadow-md transition-all duration-200 ease-in-out ${classname}`}
+      className={`w-full flex flex-col shadow-md lg:border lg:border-black gap-5 items-center min-h-60 cursor-pointer font-semibold rounded-2xl px-10 py-5 group hover:border-none hover:shadow-md transition-all duration-200 ease-in-out ${classname}`}
       // onClick={onclick}
     >
       <CardImage
