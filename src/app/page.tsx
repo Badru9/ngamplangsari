@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Map from './components/Map';
-import Navbar from './components/Navbar';
+import Image from "next/image";
+import Map from "./components/Map";
+import Navbar from "./components/Navbar";
 import {
   Almukhtaariyah,
   BestariUtami,
@@ -18,103 +18,110 @@ import {
   KerupukKetumbar,
   Pempek,
   Talangseng1,
-} from './images/image';
+  BaksoTahu,
+} from "./images/image";
 
-import Card from './components/Card';
+import Card from "./components/Card";
 
 export default function Home() {
   const listSchool = [
     {
       id: 1,
-      name: 'Pondok Pesantren Darul Arqam Muhammadiyah Garut',
+      name: "Pondok Pesantren Darul Arqam Muhammadiyah Garut",
       img: DarulArqam,
-      classname: 'col-span-1 lg:col-span-2 px-5',
+      classname: "col-span-1 lg:col-span-2 px-5",
     },
     {
       id: 2,
-      name: 'TK - SDS Al-Mukhtaariyah',
+      name: "TK - SDS Al-Mukhtaariyah",
       img: Almukhtaariyah,
-      classname: '',
+      classname: "",
     },
     {
       id: 3,
-      name: 'PAUD KOBER - TK ASY-SYUHADA',
+      name: "PAUD KOBER - TK ASY-SYUHADA",
       img: AsySyuhada,
-      classname: 'col-span-1 lg:col-span-3 px-5',
+      classname: "col-span-1 lg:col-span-3 px-5",
     },
     {
       id: 4,
-      name: 'SD - SMP Bestari Utami',
+      name: "SD - SMP Bestari Utami",
       img: BestariUtami,
-      classname: '',
+      classname: "",
     },
     {
       id: 5,
-      name: 'RA Ar-Rohimah',
+      name: "RA Ar-Rohimah",
       img: ArRohimah,
-      classname: '',
+      classname: "",
     },
     {
       id: 6,
-      name: 'SMP Plus ASY-SYUHADA',
+      name: "SMP Plus ASY-SYUHADA",
       img: SMPAsySyuhada,
-      classname: '',
+      classname: "",
     },
     {
       id: 7,
-      name: 'SMK Plus ASY-SYUHADA',
+      name: "SMK Plus ASY-SYUHADA",
       img: SMKAsySyuhada,
-      classname: 'col-span-1 lg:col-span-2 px-5',
+      classname: "col-span-1 lg:col-span-2 px-5",
     },
     {
       id: 8,
-      name: 'SDN 1 / 2 / 3 Ngamplangsari',
+      name: "SDN 1 / 2 / 3 Ngamplangsari",
       img: SDN1Ngamplangsari,
-      classname: '',
+      classname: "",
     },
   ];
 
   const listUMKM = [
     {
       id: 1,
-      name: 'Bakso Ciwang Mang Ono',
+      name: "Bakso Ciwang Mang Ono",
       img: MangOno,
-      classname: 'col-span-1 lg:col-span-2 px-5',
+      classname: "col-span-1 lg:col-span-2 px-5",
     },
     {
       id: 2,
-      name: 'Dodol Bu Rita',
+      name: "Dodol Bu Rita",
       img: Dodol,
-      classname: '',
+      classname: "",
     },
     {
       id: 3,
-      name: 'Kerajinan Kayu Jati Belanda Bapak Sopiyan',
+      name: "Kerajinan Kayu Jati Belanda Bapak Sopiyan",
       img: Kerajinan,
-      classname: '',
+      classname: "",
     },
     {
       id: 4,
-      name: 'Kerupuk Ketumbar',
+      name: "Kerupuk Ketumbar",
       img: KerupukKetumbar,
-      classname: 'col-span-1 lg:col-span-2 px-5',
+      classname: "col-span-1 lg:col-span-2 px-5",
     },
     {
       id: 5,
-      name: 'Pempek',
+      name: "Pempek",
       img: Pempek,
-      classname: 'col-span-1 lg:col-span-3 px-5',
+      classname: "col-span-1 lg:col-span-2 px-5",
+    },
+    {
+      id: 6,
+      name: "Bakso Tahu M.Uken",
+      img: BaksoTahu,
+      classname: "col-span-1 px-5",
     },
   ];
 
   const listWisata = [
     {
       id: 1,
-      name: 'Talangseng',
+      name: "Talangseng",
       img: Talangseng1,
-      classname: 'w-1/4 px-5',
+      classname: "w-1/4 px-5",
       quality: 100,
-      imgClassName: 'h-full',
+      imgClassName: "h-full",
     },
   ];
 
@@ -125,7 +132,7 @@ export default function Home() {
       <div className="w-full container mx-auto relative mt-24 lg:mb-24 mb-10">
         <div className="w-full h-full rounded-2xl bg-black/30 absolute top-0 left-0 z-10"></div>
         <Image
-          src={'/background-image.png'}
+          src={"/background-image.png"}
           alt="background"
           width={1000}
           height={1000}
@@ -146,11 +153,11 @@ export default function Home() {
           beberapa usaha mikro, kecil, dan menengah ( UMKM ) yang berkontribusi
           pada perekonomian lokal. UMKM tersebut mencakup bidang kuliner Selain
           itu, terdapat beberapa sekolah yang menyediakan fasilitas pendidikan
-          bagi anak-anak dan remaja di desa ini, seperti{' '}
+          bagi anak-anak dan remaja di desa ini, seperti{" "}
           <b>
-            {' '}
+            {" "}
             TK - SDS Al-Mukhtaariyah, Pondok Pesantren Darul Arqam Muhammadiyah
-            Garut, SMP - SMK PLUS ASY-SYUHADA,{' '}
+            Garut, SMP - SMK PLUS ASY-SYUHADA,{" "}
           </b>
           dan lain-lain. Untuk mendukung perekonomian warga, terdapat pula
           beberapa industri rumahan (home industry) yang bergerak di bidang
